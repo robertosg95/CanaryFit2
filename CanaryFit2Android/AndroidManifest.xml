@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="es.ulpgc.eite.CanaryFit.android"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="19"/>
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+                 android:icon="@drawable/icono_app"
+                 android:name=".mediator.MediatorSingleton" android:theme="@style/AppTheme">
+
+        <activity
+                android:name=".screen.portrait.principal.PortraitPrincipalView"
+                android:configChanges="orientation|keyboardHidden|screenSize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".screen.landscape.principal.LandscapePrincipalView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+
+        </activity>
+
+        <activity
+                android:name=".screen.portrait.buscador.PortraitBuscadorView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+
+        </activity>
+
+        <activity
+                android:name=".screen.landscape.buscador.LandscapeBuscadorView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+
+        </activity>
+
+        <activity
+                android:name=".screen.portrait.proximas.PortraitProxCarrerasView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+
+        </activity>
+
+        <activity
+                android:name=".screen.landscape.proximas.LandscapeProxCarrerasView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+
+        </activity>
+
+        <activity
+                android:name=".screen.portrait.resultados.PortraitResultadosView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+
+        </activity>
+
+        <activity
+                android:name=".screen.landscape.resultados.LandscapeResultadosView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+
+        </activity>
+
+    </application>
+</manifest>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CanaryFit</string>
+    <string name="lema_aplicacion">Tu buscador de carreras en Canarias</string>
+    <string name="buscador">Buscar carreras</string>
+    <string name="proximasCarreras">Próximas carreras</string>
+    <string name="resultados">Resultados</string>
+    <string name="fondo_blanco">fondo blanco</string>
+</resources>
