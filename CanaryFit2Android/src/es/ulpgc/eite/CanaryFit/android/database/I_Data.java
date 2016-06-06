@@ -1,11 +1,13 @@
 package es.ulpgc.eite.CanaryFit.android.database;
 
 
-import java.util.Date;
-
 public interface I_Data {
 
     Long getId();
+    String getLabel();
+
+/*
+
     String getNombre();
     String getModalidad();
     String getPais();
@@ -14,4 +16,6 @@ public interface I_Data {
     float getDistancia();
     String getDescripcion();
     float getPrecio();
+
+    */
 }

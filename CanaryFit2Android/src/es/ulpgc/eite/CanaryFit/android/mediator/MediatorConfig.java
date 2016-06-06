@@ -1,25 +1,20 @@
 package es.ulpgc.eite.CanaryFit.android.mediator;
 
+import es.ulpgc.eite.CanaryFit.android.category.proximas.landscape.LandscapeCategoryProximasView;
+import es.ulpgc.eite.CanaryFit.android.category.proximas.landscape.LandscapeCategoyProximasModel;
+import es.ulpgc.eite.CanaryFit.android.category.proximas.portrait.PortraitCategoryProximasModel;
+import es.ulpgc.eite.CanaryFit.android.category.proximas.portrait.PortraitCategoryProximasPresenter;
+import es.ulpgc.eite.CanaryFit.android.category.proximas.portrait.PortraitCategoryProximasView;
 import es.ulpgc.eite.CanaryFit.android.screen.buscador.model.BuscadorModel;
 import es.ulpgc.eite.CanaryFit.android.screen.landscape.buscador.LandscapeBuscadorPresenter;
 import es.ulpgc.eite.CanaryFit.android.screen.landscape.buscador.LandscapeBuscadorView;
 import es.ulpgc.eite.CanaryFit.android.screen.landscape.principal.LandscapePrincipalPresenter;
 import es.ulpgc.eite.CanaryFit.android.screen.landscape.principal.LandscapePrincipalView;
-import es.ulpgc.eite.CanaryFit.android.screen.master.landscape.productos.proximas.LandscapeProxCarrerasPresenter;
-import es.ulpgc.eite.CanaryFit.android.screen.master.landscape.productos.proximas.LandscapeProxCarrerasView;
-import es.ulpgc.eite.CanaryFit.android.screen.master.landscape.productos.resultados.LandscapeResultadosPresenter;
-import es.ulpgc.eite.CanaryFit.android.screen.master.landscape.productos.resultados.LandscapeResultadosView;
 import es.ulpgc.eite.CanaryFit.android.screen.portrait.buscador.PortraitBuscadorPresenter;
 import es.ulpgc.eite.CanaryFit.android.screen.portrait.buscador.PortraitBuscadorView;
 import es.ulpgc.eite.CanaryFit.android.screen.portrait.principal.PortraitPrincipalPresenter;
 import es.ulpgc.eite.CanaryFit.android.screen.portrait.principal.PortraitPrincipalView;
-import es.ulpgc.eite.CanaryFit.android.screen.master.portrait.productos.proximas.PortraitProxCarrerasPresenter;
-import es.ulpgc.eite.CanaryFit.android.screen.master.portrait.productos.proximas.PortraitProxCarrerasView;
-import es.ulpgc.eite.CanaryFit.android.screen.master.portrait.productos.resultados.PortraitResultadosPresenter;
-import es.ulpgc.eite.CanaryFit.android.screen.master.portrait.productos.resultados.PortraitResultadosView;
 import es.ulpgc.eite.CanaryFit.android.screen.principal.model.PrincipalModel;
-import es.ulpgc.eite.CanaryFit.android.screen.proximas.model.ProxCarrerasModel;
-import es.ulpgc.eite.CanaryFit.android.screen.resultados.model.ResultadosModel;
 import es.ulpgc.eite.framework.core.mediator.I_MediatorSingleton;
 import es.ulpgc.eite.framework.core.mediator.MediatorScreen;
 import es.ulpgc.eite.framework.core.mediator.MediatorTransition;
@@ -57,13 +52,13 @@ public class MediatorConfig extends es.ulpgc.eite.framework.core.mediator.Mediat
         ));
 
         getScreens().add(new MediatorScreen(
-                PortraitProxCarrerasView.class, PortraitProxCarrerasPresenter.class, ProxCarrerasModel.class
+                PortraitCategoryProximasView.class, PortraitCategoryProximasPresenter.class, PortraitCategoryProximasModel.class
         ));
 
         getScreens().add(new MediatorScreen(
-                LandscapeProxCarrerasView.class, LandscapeProxCarrerasPresenter.class, ProxCarrerasModel.class
+                LandscapeCategoryProximasView.class, LandscapePrincipalPresenter.class, LandscapeCategoyProximasModel.class
         ));
-
+/*
         getScreens().add(new MediatorScreen(
                 PortraitResultadosView.class, PortraitResultadosPresenter.class, ResultadosModel.class
         ));
@@ -72,9 +67,12 @@ public class MediatorConfig extends es.ulpgc.eite.framework.core.mediator.Mediat
                 LandscapeResultadosView.class, LandscapeResultadosPresenter.class, ResultadosModel.class
         ));
 
+        */
+
     }
 
     private void setPrincipalTransitionCollection() {
+
 
         getTransitions().add(new MediatorTransition(
                 PortraitPrincipalView.class, LandscapePrincipalView.class, MediatorCode.PRINCIPAL_LANDSCAPE
@@ -83,6 +81,7 @@ public class MediatorConfig extends es.ulpgc.eite.framework.core.mediator.Mediat
         getTransitions().add(new MediatorTransition(
                 LandscapePrincipalView.class, PortraitPrincipalView.class, MediatorCode.PRINCIPAL_PORTRAIT
         ));
+
 
 
         getTransitions().add(new MediatorTransition(
@@ -110,30 +109,30 @@ public class MediatorConfig extends es.ulpgc.eite.framework.core.mediator.Mediat
         ));
 
         getTransitions().add(new MediatorTransition(
-                PortraitPrincipalView.class, PortraitProxCarrerasView.class, MediatorCode.PRINCIPAL_PROXIMAS_PORTRAIT
+                PortraitPrincipalView.class, PortraitCategoryProximasView.class, MediatorCode.PRINCIPAL_PROXIMAS_PORTRAIT
         ));
 
         getTransitions().add(new MediatorTransition(
-                LandscapePrincipalView.class, LandscapeProxCarrerasView.class, MediatorCode.PRINCIPAL_PROXIMAS_LANDSCAPE
+                LandscapePrincipalView.class, LandscapeCategoryProximasView.class, MediatorCode.PRINCIPAL_PROXIMAS_LANDSCAPE
         ));
 
         getTransitions().add(new MediatorTransition(
-                PortraitProxCarrerasView.class, PortraitPrincipalView.class, MediatorCode.PROXIMAS_PRINCIPAL_PORTRAIT
+                PortraitCategoryProximasView.class, PortraitPrincipalView.class, MediatorCode.PROXIMAS_PRINCIPAL_PORTRAIT
         ));
 
         getTransitions().add(new MediatorTransition(
-                LandscapeProxCarrerasView.class, LandscapePrincipalView.class, MediatorCode.PROXIMAS_PRINCIPAL_LANDSCAPE
+                LandscapeCategoryProximasView.class, LandscapePrincipalView.class, MediatorCode.PROXIMAS_PRINCIPAL_LANDSCAPE
         ));
 
         getTransitions().add(new MediatorTransition(
-                PortraitProxCarrerasView.class, LandscapeProxCarrerasView.class, MediatorCode.PROXIMAS_LANDSCAPE
+                PortraitCategoryProximasView.class, LandscapeCategoryProximasView.class, MediatorCode.PROXIMAS_CATEGORIA_LANDSCAPE
         ));
 
         getTransitions().add(new MediatorTransition(
-                LandscapeProxCarrerasView.class, PortraitProxCarrerasView.class, MediatorCode.PROXIMAS_PORTRAIT
+                LandscapeCategoryProximasView.class, PortraitCategoryProximasView.class, MediatorCode.PROXIMAS_CATEGORIA_PORTRAIT
         ));
 
-
+/*
 
         getTransitions().add(new MediatorTransition(
                 PortraitPrincipalView.class, PortraitResultadosView.class, MediatorCode.PRINCIPAL_RESULTADOS_PORTRAIT
@@ -158,7 +157,7 @@ public class MediatorConfig extends es.ulpgc.eite.framework.core.mediator.Mediat
         getTransitions().add(new MediatorTransition(
                 LandscapeResultadosView.class, PortraitResultadosView.class, MediatorCode.RESULTADOS_PORTRAIT
         ));
-
+*/
 
     }
 }

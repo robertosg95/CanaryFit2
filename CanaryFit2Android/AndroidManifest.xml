@@ -39,28 +39,18 @@
         </activity>
 
         <activity
-                android:name=".screen.master.portrait.productos.proximas.PortraitProxCarrerasView"
+                android:name=".category.proximas.portrait.PortraitCategoryProximasView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
 
         </activity>
 
         <activity
-                android:name=".screen.master.landscape.productos.proximas.LandscapeProxCarrerasView"
+                android:name=".category.proximas.landscape.LandscapeCategoryProximasView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
 
         </activity>
 
-        <activity
-                android:name=".screen.master.portrait.productos.resultados.PortraitResultadosView"
-                android:configChanges="orientation|keyboardHidden|screenSize">
 
-        </activity>
-
-        <activity
-                android:name=".screen.master.landscape.productos.resultados.LandscapeResultadosView"
-                android:configChanges="orientation|keyboardHidden|screenSize">
-
-        </activity>
 
     </application>
 </manifest>

@@ -24,7 +24,7 @@ public abstract class MasterPresenter extends AndroidScreenPresenter implements 
         getMasterModel().setPosition(position);
 
         debug("setListPosition", "position", position);
-        //debug("setListPosition", "data", getMasterModel().getData()); <-- El getData lo hacen los hijos (categoria y producto)
+        debug("setListPosition", "data", getMasterModel().getData()); //<-- El getData lo hacen los hijos (categoria y producto)
     }
 
 
@@ -85,7 +85,14 @@ public abstract class MasterPresenter extends AndroidScreenPresenter implements 
         return null;
     }
 
+    public void changeRotation(int code){
+        debug("changeRotation", "code", code);
+
+        startNextScreenWithFinish(code, true);
     }
+
+
+}
 
 
 

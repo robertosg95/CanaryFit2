@@ -29,9 +29,9 @@ public class MediatorCode extends es.ulpgc.eite.framework.core.mediator.Mediator
 
     public static final int PRINCIPAL_PROXIMAS_LANDSCAPE = 912;
 
-    public static final int PROXIMAS_LANDSCAPE = 913;
+    public static final int PROXIMAS_CATEGORIA_LANDSCAPE = 913;
 
-    public static final int PROXIMAS_PORTRAIT = 914;
+    public static final int PROXIMAS_CATEGORIA_PORTRAIT = 914;
 
     public static final int PROXIMAS_PRINCIPAL_PORTRAIT = 915;
 
@@ -47,5 +47,9 @@ public class MediatorCode extends es.ulpgc.eite.framework.core.mediator.Mediator
 
     public static final int RESULTADOS_PRINCIPAL_PORTRAIT = 921;
 
-    public static final int RESULTADOS_PRINCIPAL_LANDSCAPE = 922;
+    public static final int PROXIMAS_CATEGORIA_PROXIMAS_PRODUCTO_LANDSCAPE = 922;
+
+    public static final int PROXIMAS_CATEGORIA_PROXIMAS_PRODUCTO_PORTRAIT = 922;
+
+
 }

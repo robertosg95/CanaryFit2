@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import es.ulpgc.eite.CanaryFit.android.R;
 import es.ulpgc.eite.CanaryFit.android.database.I_Data;
 import es.ulpgc.eite.CanaryFit.android.master.presenter.I_MasterPresenter;
 import es.ulpgc.eite.framework.android.AndroidScreenView;
@@ -40,17 +42,14 @@ public abstract class MasterView extends AndroidScreenView implements I_MasterVi
     }
 
     // TODO: 30/04/2016 implementar en los hijos
-    private int getListLayout(){
-        return 0;
-    }
+    protected abstract int getListLayout();
 
     private int getRowLayout(){
-        return 0;
+        return R.layout.master_row;
     }
 
-    private int getListView(){
-        return 0;
-    }
+    protected abstract int getListView();
+
 
     @Override
     public void setMasterScreen() {
@@ -157,11 +156,11 @@ public abstract class MasterView extends AndroidScreenView implements I_MasterVi
                         (Context.LAYOUT_INFLATER_SERVICE));
 
         rowView = inflater.inflate(_getRowLayout(), parent, false);
-        /* todo implementar en los hijos
+
         I_Data data = getItem(position);
         TextView titleView = (TextView) rowView.findViewById(R.id.lbl_title);
         titleView.setText(data.getLabel());
-        */
+
         return rowView;
     }
 }
